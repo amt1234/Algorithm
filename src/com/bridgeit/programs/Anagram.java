@@ -2,7 +2,7 @@ package com.bridgeit.programs;
 
 import java.util.Scanner;
 
-import com.bridgeit.utility.Utility;
+import com.bridgit.utility.Utility;
 
 public class Anagram {
 
