@@ -1,5 +1,6 @@
 package com.bridgit.utility;
 
+import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -292,6 +293,13 @@ public class Utility {
 	
 	//binaryserch for string
 	
+	/**
+	 * @param word
+	 * @param words
+	 * @param a
+	 * @param b
+	 * @return
+	 */
 	public static int bsearch(String word, String [] words, int a, int b)
 	{
 		if(b <= a)
@@ -341,7 +349,7 @@ public class Utility {
 		System.out.println(N);
 		
 		int mid = 0,cunt=0,cunt1=0;
-		boolean b=true;
+		
 		int array[]=new int[N];
 		int i,j = 0;
 		boolean flag=false;
@@ -351,9 +359,7 @@ public class Utility {
 			
 		}
 		int startp=0,endp=array.length-1;
-		
-		
-		
+			
 		while(startp<=endp)
 		{
 			int m=(startp+(endp-1))/2;
@@ -384,4 +390,70 @@ public class Utility {
 		return -1;
 	
 	}
+	
+	public static int vending(int amount,HashSet hashset,int count)
+	{
+		int array[]= {2000,1000,500,200,100,50,20,10,5,2,1};
+		int n=array.length;
+		
+		if(amount>0)
+		{
+			for(int i=0;i<=n;i++)
+			{
+				if(array[i]<=amount)
+				{
+					amount=amount-array[i];
+					count++;
+					hashset.add(array[i]);
+					break;
+					
+				}
+				
+			}
+		
+			if(amount==0)
+			{
+				System.out.println(count);
+				System.out.println(hashset);
+				return 0;
+			}
+		
+		}
+		return vending(amount,hashset,count);
+		
+		
+	}
+	
+	public static void toBinary(int number)
+	{
+	
+
+		String string="";
+		while(number!=0)
+		{
+			int remainder=number%2;
+			string=remainder+string;
+			number=number/2;
+			
+		}
+		double result = 0;
+		int j=0;
+		System.out.println(string);
+		for (int i =  string.length()-1; i >=0; i--) 
+		{
+			if (string.charAt(i)=='0') {
+				result = result +(0 * Math.pow(2, j));
+				j++;
+				
+			}else {
+				result = result +(1 * Math.pow(2, j));
+				j++;
+				
+			}
+			
+		}
+		System.out.println((int)result);
+	}
+
+	
 }

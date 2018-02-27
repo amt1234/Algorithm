@@ -11,8 +11,6 @@ public class QuetionNum5 {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Enter the number N : ");
 		int N=scanner.nextInt();
-		//int target=30;
-		//Utility.numberFind(N, target);
 		
 		System.out.println("enter the target key");
 		int target=scanner.nextInt();
