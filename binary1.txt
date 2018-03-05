@@ -1,0 +1,17 @@
+hello.. i am poonam , how are you;
+
+
+
+
+
+int index=(m.printBinarySearch(array, target, 0, array.length));
+		
+		if(index==-1) {
+			System.out.println("not found");
+		} else {
+			System.out.println("found at index " + index);*/
+		
+		
+		System.out.println("Enter the target key");
+		Integer target=scanner.nextInt();
+		String target=scanner.nextLine();

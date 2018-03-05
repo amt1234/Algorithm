@@ -1,14 +1,16 @@
 package com.bridgeit.programs;
 
-import java.util.Scanner;
-
 import com.bridgit.utility.Utility;
-
+/******************************************************************************
+ *  Purpose:  calculates the monthly payments
+ *  @author  Poonam
+ *  @version 1.0
+ *  @since   05-03-2018
+ ******************************************************************************/
 public class Montlypayment {
 
 	public static void main(String args[])
 	{
-		
 		double P,Y, R;
 		System.out.println("Enter the principal :"+args[0]);
 		P=Float.parseFloat(args[0]);

@@ -1,37 +1,28 @@
 package com.bridgeit.programs;
 
-import java.util.Scanner;
-
+import com.bridgit.utility.Utility;
+/******************************************************************************
+ *  Purpose:   Reads in integers prints them in sorted order using Bubble Sort
+ *  @author  Poonam
+ *  @version 1.0
+ *  @since   05-03-2018
+ *
+ ******************************************************************************/
 public class Bubble {
 
 	public static void main(String[] args) 
 	{
-		Scanner scanner=new Scanner(System.in);
-		int arr[]=new int[5];
+		Utility utility=new Utility();
+		System.out.println("enter the size of array");
+		int size=utility.inputInteger();
+		Integer array[]=new Integer[size];
 		System.out.println("enter the values : ");
-		for(int a=0;a<arr.length;a++)
+		for(int i=0;i<array.length;i++)
 		{
-			arr[a]=scanner.nextInt();
+			array[i]=utility.inputInteger();
 			
 		}
-		int temp=0,i;
-		
-		for(i=0;i<6;i++)
-		{
-			for(int j=0;j<6-i-1;j++)
-			{
-				if(arr[j]>arr[j+1])
-				{
-					temp=arr[j];
-					arr[j]=arr[j+1];
-					arr[j+1]=temp;
-					//System.out.print(a[i]+" ");
-				}
-				
-			}
-			System.out.print(arr[i]+" ");
-			
-		}
+		utility.printBubble(array);
 		
 	}
 

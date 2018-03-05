@@ -1,17 +1,23 @@
 package com.bridgeit.programs;
 import java.util.*;
-
 import com.bridgit.utility.Utility;
+/******************************************************************************
+ *  Purpose:  Find the Fewest Notes to be returned for Vending Machine
+ *  @author  Poonam
+ *  @version 1.0
+ *  @since   05-03-2018
+ *
+ ******************************************************************************/
 public class Vending {
 
 	public static void main(String[] args) 
 	{
-		Scanner scanner=new Scanner(System.in);
+		Utility utility=new Utility();
 		HashSet hashset=new HashSet();
 		System.out.println("Enter the amount : ");
-		int amount=scanner.nextInt();
+		int amount=utility.inputInteger();
 		
-		Utility.vending(amount, hashset, amount);
+		utility.vending(amount, hashset, 0);
 		
 		 
 		

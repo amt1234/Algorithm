@@ -1,17 +1,20 @@
 package com.bridgeit.programs;
 
-import java.util.Scanner;
-
 import com.bridgit.utility.Utility;
-
+/******************************************************************************
+ *  Purpose:  compute the square root of a nonnegative number
+ *  @author  Poonam
+ *  @version 1.0
+ *  @since   05-03-2018
+ ******************************************************************************/
 public class ToBinary {
 
 	public static void main(String[] args) 
 	{
-		Scanner scanner=new Scanner(System.in);
+		Utility utility=new Utility();
 		System.out.println("Enter the number");
-		int number=scanner.nextInt();
-		Utility.toBinary(number);
+		int number=utility.inputInteger();
+		utility.toBinary(number);
 	
 	}
 }

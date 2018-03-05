@@ -2,22 +2,20 @@ package com.bridgeit.programs;
 
 import com.bridgit.utility.Utility;
 /******************************************************************************
- *  Purpose:  compute the square root of a nonnegative number
+ *  Purpose: Decimal to binary and Swap nibbles and find the new number
  *  @author  Poonam
  *  @version 1.0
  *  @since   05-03-2018
  ******************************************************************************/
-public class SquareRoot
-{
-	public static void main(String args[])
+public class NibbleBinary {
+
+	public static void main(String[] args)
 	{
-		
-		int c;
 		Utility utility=new Utility();
-		System.out.println("Enter the c :");
-		c=utility.inputInteger();
-		
-		utility.squroot(c);
+		System.out.println("Enter the number");
+		int number=utility.inputInteger();
+		utility.nibbleSwap(number);
 		
 	}
+
 }
